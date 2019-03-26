@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Risk of Heart Disease Calculator</title>
+
+        <!-- css -->
+        <link rel = "stylesheet" type = "text/css" href = "riskofheartdisease.css">
+        <!-- javascript -->
+        <script type = "text/javascript" src = "riskofheartdisease.js"></script>
+    </head>
+
+    <body>
+      <h1>Risk of Heart Disease Calculator</h1>
+      <!-- <p></p> disclaimer -->
+        <form>
+          <ol>
+            <li><label>Gender: </label><br>
+            <input type = "radio" name = "one" id = "a1" value = "1" checked = "checked"/>
+            <label for = "a1">Male</label><br>
+            <input type = "radio" name = "one" id = "b1" value = "0"/>
+            <label for = "b1">Female</label><br>
+            <input type = "radio" name = "one" id = "c1" value = "0"/>
+            <label for = "c1">Other</label><br></li>
+
+            <br>
+
+            <li><label>Age: </label><br>
+            <input type = "radio" name = "two" id = "a2" value = "2" checked = "checked"/>
+            <label for = "a2">over 70 years</label><br>
+            <input type = "radio" name = "two" id = "b2" value = "1"/>
+            <label for = "b2">40 - 70 years</label><br>
+            <input type = "radio" name = "two" id = "c2" value = "1"/>
+            <label for = "c2">under 40 years</label><br></li>
+
+            <br>
+
+            <li><label>Height: </label><br>
+              <input type = "number" name = "three" id = "ft" min = "0" max = "10">
+              <label for = "ft">ft.</label>
+              <input type = "number" name = "three" id = "in" min = "0" max = "12">
+              <label for = "in">in.</label>
+            </li>
+
+            <br>
+
+            <li><label>Weight: </label><br>
+              <input type = "number" name = "four" id = "lbs" min = "0" max = "1500">
+              <label for = "lbs">lbs.</label>
+            </li>
+
+            <br>
+
+            <li><label>On average, how much physical activity do you get every week?</label><br>
+            <input type = "radio" name = "five" id = "a5" value = "0" checked = "checked"/>
+            <label for = "a5">over 3 hours</label><br>
+            <input type = "radio" name = "five" id = "b5" value = "2"/>
+            <label for = "b5">2 - 3 hours</label><br>
+            <input type = "radio" name = "five" id = "c5" value = "4"/>
+            <label for = "c5">under 2 hours</label><br></li>
+
+            <br>
+
+            <li><label>On average, how much sleep do you get every night?</label><br>
+            <input type = "radio" name = "six" id = "a6" value = "0" checked = "checked"/>
+            <label for = "a6">over 7 hours</label><br>
+            <input type = "radio" name = "six" id = "b6" value = "1"/>
+            <label for = "b6">4 - 7 hours</label><br>
+            <input type = "radio" name = "six" id = "c6" value = "2"/>
+            <label for = "c6">under 4 hours</label><br></li>
+
+            <br>
+
+          </ol>
+        </form>
+
+        <button type = "button" onclick = "results();">Submit</button>
+
+        <br>
+
+        <div id = "results"></div>
+    </body>
+</html>
