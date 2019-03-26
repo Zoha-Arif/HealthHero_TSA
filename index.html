@@ -1,4 +1,4 @@
-<DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Health Hero</title>
@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 </head>
-<body background = "cloud1.jpg">
+<body id="open" onload="typeWriter()">
     <div class="dropdown">
-    <img src="circle.png" class="dropbtn" height="25px" width="auto">
+    <img src="circle1.png" class="dropbtn" height="25px" width="auto">
         <div class="dropdown-content">
             <a href="index.html">Home</a>
             <a href="Heart.html">Heart: The Organ</a>
@@ -17,5 +18,9 @@
             <a href="Eye.html">Eye: The Organ</a>
         </div>
     </div>
+    <p id="welcome"></p>
+    <!-- <p id="welcome2">What is Health Hero?</p> -->
+    <img id="heart" src="heart.png">
+    <img id="doodle" src="doodle.png">
 </body>
 </html>
