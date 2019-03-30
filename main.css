@@ -1,12 +1,11 @@
-#navbar {
-    font-family: 'Baloo Chettan', cursive;
-    color: white; 
-    text-decoration: none; 
-    list-style-type: none;
-    /* display: inline; */
-    margin: 0px;
-    padding: 10px;
-    overflow: hidden;
+.navbar {
+    /* border-style: solid; 
+    border-bottom-width: 0px; 
+    border-top-width: 1px; 
+    border-left-width: 0px; 
+    border-right-width: 0px; 
+    border-color: black; */
+    background-color: #E31545;
 }
   /*li {
     float: left;
@@ -38,8 +37,9 @@
 .dropbtn {
     padding: 10px; 
     position: absolute;
-    top: 10px; 
+    top: 4px; 
     left: 50%;
+    
 }
 .dropdown {
 /*background-color: #E31545; */
@@ -47,6 +47,8 @@
     display: inline-block;
     height: 47px;
     width: 100%; 
+    background-color: #E31545;
+    z-index: 100; 
 }
   .dropdown-content {
     font-family: 'Baloo Chettan', cursive;
@@ -122,9 +124,11 @@
 }
 
 #heart {
-    height: 800px; 
+    height: 320px; 
     position: absolute;
-    top: 5px; 
+    left: 100px; 
+    top: 100px; 
+    z-index: 50; 
 }
 
 #doodle {
@@ -132,4 +136,76 @@
     position: absolute;
     top: 300px; 
     left: 600px;
+}
+
+#title1{
+    position: absolute; 
+    top: 0px; 
+    left:40%; 
+    font-family: Roboto;
+    font-weight: bold;
+    padding-left: 5px; 
+    padding-bottom: 3px; 
+    margin-bottom: 3px; 
+    color: white;  
+    z-index: 101; 
+}
+
+#secondt {
+    font-weight: normal; 
+}
+
+#back {
+    height: 200px; 
+    width: auto; 
+    z-index: 1; 
+    position: absolute; 
+}
+
+#back1 {
+    height: 200px; 
+    width: auto; 
+    z-index: -1; 
+    position: absolute;
+    left: 42%;  
+}
+#back2 {
+    height: 200px; 
+    width: auto; 
+    z-index: -1; 
+    position: absolute;
+    left: 86%;  
+}
+
+#back3 {
+    height: 600px; 
+    width: auto; 
+    z-index: 30;
+    position: absolute;
+    left: 3%;
+}
+
+#back4 {
+    height: 600px; 
+    width: auto; 
+    z-index: 30;
+    position: absolute;
+    left: 70%;
+}
+
+#back5 {
+    height: 120px; 
+    width: auto; 
+    z-index: 30;
+    position: absolute;
+    left: 34%;
+}
+
+#title {
+    height: 250px; 
+    width: auto; 
+    z-index: 60; 
+    position: absolute;
+    top: 20%; 
+    left: 30%;
 }
