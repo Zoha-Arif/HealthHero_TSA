@@ -227,3 +227,112 @@
     top: 20%; 
     left: 30%;
 }
+
+#titleh {
+    font-family: 'Baloo', cursive;
+    color: #E31545; 
+    font-size: 100px; 
+    position: absolute;
+    left: 35%;
+    top: 10%; 
+}
+
+#defh {
+    font-family: 'Trebuchet MS'; 
+    font-size: 24px; 
+}
+
+#defdiv {
+    width: 400px; 
+    height: auto; 
+    position: absolute;
+    left: 38%;
+    top: 35%; 
+}
+
+
+#back8 {
+    height: 470px; 
+    width: auto; 
+    position: absolute;
+    z-index: 0; 
+    top: 13%;
+    left: 53%;
+}
+
+#stheart {
+    position: relative; 
+    left: 15%;
+    top: 40px; 
+    height: 250px;
+}
+
+#heartp {
+    height: 400px;
+    width: auto; 
+    position: absolute;
+    top: 350px; 
+    left: 30%;
+}
+
+#hhe {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+}
+
+.title4 {
+    font-family: 'Baloo', cursive;
+    color: #E31545; 
+    font-size: 30px; 
+}
+
+.title40 {
+    position: relative;
+    left: 20%;
+    font-family: 'Baloo', cursive;
+    color: #E31545; 
+    font-size: 30px; 
+}
+
+#heartf {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+}
+
+#heartg {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+}
+
+#heartv {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+}
+
+#calc {
+    position: relative;
+    left: 20%;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+    font-weight: bold; 
+}
+
+#page {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    font-family: 'Trebuchet MS'; 
+    font-size: 14px; 
+}
