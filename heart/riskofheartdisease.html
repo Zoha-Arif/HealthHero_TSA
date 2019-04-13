@@ -3,80 +3,199 @@
     <head>
         <title>Risk of Heart Disease Calculator</title>
 
-        <!-- css -->
-        <link rel = "stylesheet" type = "text/css" href = "riskofheartdisease.css">
         <!-- javascript -->
         <script type = "text/javascript" src = "riskofheartdisease.js"></script>
     </head>
 
     <body>
       <h1>Risk of Heart Disease Calculator</h1>
-      <!-- <p></p> disclaimer -->
+      <div id = "page">
+        <p>Disclaimer: The 'Risk of Heart Disease Calculator' is not a substitute for a professional diagnosis. Regardless of the results you receive, you should consult a medical professional, preferably a cardiologist, about your heart health.</p>
+        <p>Please answer the following questions honestly.</p>
         <form>
           <ol>
-            <li><label>Gender: </label><br>
-            <input type = "radio" name = "one" id = "a1" value = "1" checked = "checked"/>
-            <label for = "a1">Male</label><br>
-            <input type = "radio" name = "one" id = "b1" value = "0"/>
-            <label for = "b1">Female</label><br>
-            <input type = "radio" name = "one" id = "c1" value = "0"/>
-            <label for = "c1">Other</label><br></li>
-
-            <br>
-
-            <li><label>Age: </label><br>
-            <input type = "radio" name = "two" id = "a2" value = "2" checked = "checked"/>
-            <label for = "a2">over 70 years</label><br>
-            <input type = "radio" name = "two" id = "b2" value = "1"/>
-            <label for = "b2">40 - 70 years</label><br>
-            <input type = "radio" name = "two" id = "c2" value = "1"/>
-            <label for = "c2">under 40 years</label><br></li>
-
-            <br>
-
-            <li><label>Height: </label><br>
-              <input type = "number" name = "three" id = "ft" min = "0" max = "10">
-              <label for = "ft">ft.</label>
-              <input type = "number" name = "three" id = "in" min = "0" max = "12">
-              <label for = "in">in.</label>
+            <li>
+              <label>Gender:</label><br> <!-- gender -->
+              <input type = "radio" name = "1" id = "a1" value = "1" onclick = "gender()" checked = "checked"/>
+              <label for = "a1">Male</label><br>
+              <input type = "radio" name = "1" id = "b1" value = "0" onclick = "gender()"/>
+              <label for = "b1">Female</label><br>
             </li>
 
             <br>
 
-            <li><label>Weight: </label><br>
-              <input type = "number" name = "four" id = "lbs" min = "0" max = "1500">
-              <label for = "lbs">lbs.</label>
+            <li>
+              <label>Age:</label><br> <!-- age -->
+              <input type = "radio" name = "2" id = "a2" value = "0" onclick = "age()" checked = "checked"/>
+              <label for = "a2">3 - 5 years</label><br>
+              <input type = "radio" name = "2" id = "b2" value = "0" onclick = "age()"/>
+              <label for = "b2">6 - 13 years</label><br>
+              <input type = "radio" name = "2" id = "c2" value = "0" onclick = "age()"/>
+              <label for = "c2">14 - 17 years</label><br>
+              <input type = "radio" name = "2" id = "d2" value = "0" onclick = "age()"/>
+              <label for = "d2">18 - 25 years</label><br>
+              <input type = "radio" name = "2" id = "e2" value = "0" onclick = "age()"/>
+              <label for = "e2" id = "age1">26 - 44 years</label><br>
+              <input type = "radio" name = "2" id = "f2" value = "3" onclick = "age()"/>
+              <label for = "f2" id = "age2">45 - 65 years</label><br>
+              <input type = "radio" name = "2" id = "g2" value = "3" onclick = "age()"/>
+              <label for = "g2">65 + years</label><br>
             </li>
 
             <br>
 
-            <li><label>On average, how much physical activity do you get every week?</label><br>
-            <input type = "radio" name = "five" id = "a5" value = "0" checked = "checked"/>
-            <label for = "a5">over 3 hours</label><br>
-            <input type = "radio" name = "five" id = "b5" value = "2"/>
-            <label for = "b5">2 - 3 hours</label><br>
-            <input type = "radio" name = "five" id = "c5" value = "4"/>
-            <label for = "c5">under 2 hours</label><br></li>
+            <li> <!-- measurement system -->
+              <input type = "radio" name = "3" id = "a3" onclick = "system()" checked = "checked">
+              <label for = "a3">customary</label>
+              <input type = "radio" name = "3" id = "b3" onclick = "system()">
+              <label for = "b3">metric</label>
+            </li>
 
             <br>
 
-            <li><label>On average, how much sleep do you get every night?</label><br>
-            <input type = "radio" name = "six" id = "a6" value = "0" checked = "checked"/>
-            <label for = "a6">over 7 hours</label><br>
-            <input type = "radio" name = "six" id = "b6" value = "1"/>
-            <label for = "b6">4 - 7 hours</label><br>
-            <input type = "radio" name = "six" id = "c6" value = "2"/>
-            <label for = "c6">under 4 hours</label><br></li>
+            <li>
+              <label>Height:</label><br> <!-- height -->
+              <input type = "number" name = "4" id = "height1" min = "0">
+              <label for = "height1" id = "ftorm">ft</label>
+              <input type = "number" name = "4" id = "height2" min = "0">
+              <label for = "height2" id = "inorcm">in</label>
+            </li>
+
+            <br>
+
+            <li>
+              <label>Weight:</label><br> <!-- weight -->
+              <input type = "number" name = "5" id = "weight" min = "0">
+              <label for = "weight" id = "lbsorkg">lbs</label>
+            </li>
+
+            <br>
+
+            <li>
+              <label>Have one or more of your family members had heart disease?</label><br> <!-- family history of heart disease -->
+              <input type = "radio" name = "6" id = "a6" value = "3" checked = "checked"/>
+              <label for = "a6">Yes</label><br>
+              <input type = "radio" name = "6" id = "b6" value = "0"/>
+              <label for = "b6">No</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>Do you use tobacco regularly? Have you been exposed to secondhand smoke for a long period of time?</label><br> <!-- tobacco (smoking + long-term exposure to secondhand smoke) -->
+              <input type = "radio" name = "7" id = "a7" value = "5" checked = "checked"/>
+              <label for = "a7">Yes</label><br>
+              <input type = "radio" name = "7" id = "b7" value = "0"/>
+              <label for = "b7">No</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>Do you drink alcohol? If so, about how many drinks do you have a day?</label><br> <!-- alcohol -->
+              <input type = "radio" name = "8" id = "a8" value = "0" checked = "checked"/>
+              <label for = "a8">1 drink</label><br>
+              <input type = "radio" name = "8" id = "b8" value = ""/>
+              <label for = "b8">2 drinks</label><br>
+              <input type = "radio" name = "8" id = "c8" value = "5"/>
+              <label for = "c8">2 + drinks</label><br>
+              <input type = "radio" name = "8" id = "d8" value = "0"/>
+              <label for = "d8">I do not drink alcohol. / I do not drink alcohol daily.</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>Which of the following medical conditions do you have? Please check all that apply.</label><br> <!-- medical conditions -->
+              <input type = "checkbox" name = "9" id = "a9" value = "5"/>
+              <label for = "a9">high blood pressure</label><br>
+              <input type = "checkbox" name = "9" id = "b9" value = "5"/>
+              <label for = "b9">high blood cholesterol levels</label><br>
+              <input type = "checkbox" name = "9" id = "c9" value = "5"/>
+              <label for = "c9">diabetes</label><br>
+              <input type = "checkbox" name = "9" id = "d9" value = "5"/>
+              <label for = "d9">obesity</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>On average, how much sleep do you get every night?</label><br> <!-- sleep -->
+              <input type = "radio" name = "10" id = "a10" value = "3" checked = "checked"/>
+              <label for = "a10" id = "sleep1">under 10 hours</label><br>
+              <input type = "radio" name = "10" id = "b10" value = "0"/>
+              <label for = "b10" id = "sleep2">10 - 13 hours</label><br>
+              <input type = "radio" name = "10" id = "c10" value = "1.5"/>
+              <label for = "c10" id = "sleep3">over 13 hours</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>On average, how much physical activity do you get every week?</label><br> <!-- physical activity -->
+              <input type = "radio" name = "11" id = "a11" value = "2" checked = "checked"/>
+              <label for = "a11" id = "exercise1">under 2 hours</label><br>
+              <input type = "radio" name = "11" id = "b11" value = "1"/>
+              <label for = "b11" id = "exercise2">2 - 3 hours</label><br>
+              <input type = "radio" name = "11" id = "c11" value = "0"/>
+              <label for = "c11" id = "exercise3">over 3 hours</label><br>
+            </li>
+
+            <br>
+
+            <p>To what extent to you agree or disagree with each of the following statements?</p>
+
+            <li>
+              <label>You maintain a healthy diet.</label><br> <!-- diet -->
+              <input type = "radio" name = "12" id = "a12" value = "0" checked = "checked"/>
+              <label for = "a12">Strongly Agree</label><br>
+              <input type = "radio" name = "12" id = "b12" value = "1"/>
+              <label for = "b12">Agree</label><br>
+              <input type = "radio" name = "12" id = "c12" value = "2"/>
+              <label for = "c12">Neutral</label><br>
+              <input type = "radio" name = "12" id = "d12" value = "3"/>
+              <label for = "d12">Disagree</label><br>
+              <input type = "radio" name = "12" id = "e12" value = "4"/>
+              <label for = "e12">Strongly Disagree</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>You take care of your personal hygiene.</label><br> <!-- hygiene -->
+              <input type = "radio" name = "13" id = "a13" value = "0" checked = "checked"/>
+              <label for = "a13">Strongly Agree</label><br>
+              <input type = "radio" name = "13" id = "b13" value = "1"/>
+              <label for = "b13">Agree</label><br>
+              <input type = "radio" name = "13" id = "c13" value = "2"/>
+              <label for = "c13">Neutral</label><br>
+              <input type = "radio" name = "13" id = "d13" value = "3"/>
+              <label for = "d13">Disagree</label><br>
+              <input type = "radio" name = "13" id = "e13" value = "4"/>
+              <label for = "e13">Strongly Disagree</label><br>
+            </li>
+
+            <br>
+
+            <li>
+              <label>You often feel a lot of stress.</label><br> <!--stress -->
+              <input type = "radio" name = "14" id = "a14" value = "4" checked = "checked"/>
+              <label for = "a14">Strongly Agree</label><br>
+              <input type = "radio" name = "14" id = "b14" value = "3"/>
+              <label for = "b14">Agree</label><br>
+              <input type = "radio" name = "14" id = "c14" value = "2"/>
+              <label for = "c14">Neutral</label><br>
+              <input type = "radio" name = "14" id = "d14" value = "1"/>
+              <label for = "d14">Disagree</label><br>
+              <input type = "radio" name = "14" id = "e14" value = "0"/>
+              <label for = "e14">Strongly Disagree</label><br>
+            </li>
 
             <br>
 
           </ol>
         </form>
-
         <button type = "button" onclick = "results();">Submit</button>
-
-        <br>
-
-        <div id = "results"></div>
+      </div>
     </body>
 </html>
